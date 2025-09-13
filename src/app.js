@@ -15,7 +15,7 @@ app.get("/health", (_req, res) => {
 });
 
 app.get("/ping", (_req, res) => {
-  res.json({ pong: true, at: new Date().toISOString(), Participantes: ["Karen Sofia Ramirez X2", "Deyvid Santiago Galarza (No ayudo)", "Jean Paul Solano"] });
+  res.json({ pong: true, at: new Date().toISOString(), Participantes: ["Karen Sofia Ramirez", "Deyvid Santiago Galarza (No ayudo en nada)", "Jean Paul Solano"] });
 });
 app.get("/version", (_req, res) => {
   res.json({ name: "hello-cloud", version: "1.0.0" });
