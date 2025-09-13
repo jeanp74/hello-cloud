@@ -15,7 +15,7 @@ app.get("/", (_req, res) => {
 });
 
 app.get("/health", (_req, res) => {
-  res.json({ status: "ok", uptime: process.uptime() });
+  res.json({ status: "okkkkkkk", uptime: process.uptime() });
 });
 
 app.get("/ping", (_req, res) => {
