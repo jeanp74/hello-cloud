@@ -2,7 +2,7 @@ name: Build & Push Docker image to ACR (latest + versioned)
 
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -32,6 +32,6 @@ jobs:
       - name: 🏗️ Build & Push Docker images
         run: |
           docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:latest .
-          docker tag ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:latest ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:${{ steps.vars.outputs.TAG }}
+          docker tag  ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:latest ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:${{ steps.vars.outputs.TAG }}
           docker push ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:latest
           docker push ${{ secrets.ACR_LOGIN_SERVER }}/hello-cloud:${{ steps.vars.outputs.TAG }}
