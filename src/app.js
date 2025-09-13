@@ -15,7 +15,7 @@ app.get("/health", (_req, res) => {
 });
 
 app.get("/jp", (_req, res) => {
-  res.json({ Nombre: "ok", uptime: process.uptime(), pruebas: "prueba" });
+  res.json({ Nombre: "Jean Paul sh", uptime: process.uptime(), pruebas: "prueba2" });
 });
 
 app.get("/version", (_req, res) => {
