@@ -4,10 +4,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (_req, res) => {
-  res.json({
-    message: "Hello Cloud ☁️",
-    docs: ["/health", "/version"]
+  res.json({ 
+    Participantes: ["Karen Sofia Ramirez", "Deyvid Santiago Galarza (No ayudo en nada)", "Jean Paul Solano"] ,
+    Repo: "https://github.com/jeanp74/hello-cloud.git"
   });
+  // res.json({
+  //   message: "Hello Cloud ☁️",
+  //   docs: ["/health", "/version"]
+  // });
 });
 
 app.get("/health", (_req, res) => {
