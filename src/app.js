@@ -14,6 +14,10 @@ app.get("/health", (_req, res) => {
   res.json({ status: "ok", uptime: process.uptime() });
 });
 
+app.get("/jp", (_req, res) => {
+  res.json({ Nombre: "ok", uptime: process.uptime(), pruebas: "prueba" });
+});
+
 app.get("/version", (_req, res) => {
   res.json({ name: "hello-cloud", version: "1.0.0" });
 });
